@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Percentage Calculator</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav>
+  <div class="logo">StudentTools</div>
+  <div>
+     <a href="../index.html">Home</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../pages/about.html">About</a>
+    <a href="../pages/contact.html">Contact</a>
+    <a href="../pages/privacy.html">Privacy</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Percentage Calculator</h1>
+  <input id="marks" placeholder="Obtained Marks">
+  <input id="total" placeholder="Total Marks">
+  <button onclick="calc()">Calculate Percentage</button>
+  <h2 id="res"></h2>
+</div>
+
+<script>
+function calc(){
+  let m=parseFloat(document.getElementById("marks").value)||0;
+  let t=parseFloat(document.getElementById("total").value)||0;
+  document.getElementById("res").innerText="Percentage: "+((m/t)*100).toFixed(2)+"%";
+}
+</script>
+<footer>© 2026 Student Tools Hub</footer>
+</body>
+</html>

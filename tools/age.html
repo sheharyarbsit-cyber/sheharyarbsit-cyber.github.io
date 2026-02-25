@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Age Calculator</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav>
+  <div class="logo">StudentTools</div>
+  <div>
+    <a href="../index.html">Home</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../pages/about.html">About</a>
+    <a href="../pages/contact.html">Contact</a>
+    <a href="../pages/privacy.html">Privacy</a>
+  </div>
+</nav>
+<div class="container">
+  <h1>Age Calculator</h1>
+  <input type="date" id="dob">
+  <button onclick="calc()">Calculate Age</button>
+  <h2 id="res"></h2>
+</div>
+
+<script>
+function calc(){
+  let dob=new Date(document.getElementById("dob").value);
+  let diff=Date.now()-dob.getTime();
+  let age=new Date(diff).getUTCFullYear()-1970;
+  document.getElementById("res").innerText="Age: "+age+" years";
+}
+</script>
+<footer>© 2026 Student Tools Hub</footer>
+</body>
+</html>

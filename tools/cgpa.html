@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CGPA Calculator</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav>
+  <div class="logo">StudentTools</div>
+  <div>
+     <a href="../index.html">Home</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../pages/about.html">About</a>
+    <a href="../pages/contact.html">Contact</a>
+    <a href="../pages/privacy.html">Privacy</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>CGPA Calculator</h1>
+  <input id="g1" placeholder="Semester 1 GPA">
+  <input id="g2" placeholder="Semester 2 GPA">
+  <input id="g3" placeholder="Semester 3 GPA">
+  <button onclick="calc()">Calculate CGPA</button>
+  <h2 id="res"></h2>
+</div>
+
+<script>
+function calc(){
+  let g1=parseFloat(document.getElementById("g1").value)||0;
+  let g2=parseFloat(document.getElementById("g2").value)||0;
+  let g3=parseFloat(document.getElementById("g3").value)||0;
+  document.getElementById("res").innerText="Your CGPA: "+((g1+g2+g3)/3).toFixed(2);
+}
+</script>
+<footer>© 2026 Student Tools Hub</footer>
+</body>
+</html>
